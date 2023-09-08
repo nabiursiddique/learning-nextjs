@@ -7,7 +7,7 @@ const LoginTeacher = () => {
     const router = useRouter()
     return (
         <div>
-            <h1>Login for teacher</h1>
+            <h1 className='heading'>Login for teacher</h1>
             <button onClick={() => router.push('/login')}>Go to Login</button>
         </div>
     );
