@@ -23,6 +23,9 @@ export default function Home() {
       <br />
       <hr />
       <button onClick={() => navigate('/productlist')}>Product Page</button>
+      <br />
+      <hr />
+      <button onClick={() => navigate('/productlistserver')}>Product Page server</button>
     </main>
   )
 }
