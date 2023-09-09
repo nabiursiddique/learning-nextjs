@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const productlist = async () => {
     let data = await fetch('https://dummyjson.com/products');
     data = await data.json();
@@ -7,7 +9,6 @@ const productlist = async () => {
 const Productlistserver = async () => {
     // Server side fetching
     const products = await productlist();
-    console.log(products);
     return (
         <div>
             <h1>Product list from server</h1>
@@ -15,6 +16,7 @@ const Productlistserver = async () => {
                 products.map((product, ind) => (
                     <div key={ind}>
                         <h3>Name: {product.title}</h3>
+                        <Button price={product.price} />
                     </div>
                 ))
             }
