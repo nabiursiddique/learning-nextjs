@@ -1,14 +1,16 @@
 "use client"
 
 import Link from 'next/link';
-import styles from './page.module.css'
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import profileImage from '../../public/vercel.svg'
 
 export default function Home() {
   const router = useRouter();
   const navigate = (route) => {
     router.push(route)
   }
+  console.log(profileImage);
   return (
     <main>
       <h1>Home page</h1>
@@ -26,6 +28,12 @@ export default function Home() {
       <br />
       <hr />
       <button onClick={() => navigate('/productlistserver')}>Product Page server</button>
+      <br />
+      <Image
+        src={profileImage}
+        alt='profile'
+      />
+
     </main>
   )
 }
